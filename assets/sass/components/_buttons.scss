@@ -1,0 +1,68 @@
+.btn-explorer {
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: $radius-pill;
+  display: inline-flex;
+  font-family: $font-heading;
+  font-weight: 900;
+  gap: .5rem;
+  justify-content: center;
+  line-height: 1.1;
+  padding: .9rem 1.45rem;
+  transition: $transition-smooth;
+
+  &:hover {
+    transform: translateY(-3px) scale(1.015);
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 .25rem rgba($primary-500, .32);
+    outline: 0;
+  }
+
+  i {
+    color: inherit;
+    font-size: 1.05em;
+  }
+
+  &--primary {
+    background: linear-gradient(180deg, $primary-400 0%, $primary-500 100%);
+    box-shadow: $shadow-primary;
+    color: $neutral-900;
+
+    &:hover {
+      background: linear-gradient(180deg, $primary-500 0%, $primary-600 100%);
+      color: $neutral-900;
+    }
+  }
+
+  &--blue {
+    background: rgba($accent-blue-400, .16);
+    border-color: rgba($accent-blue-500, .34);
+    color: $accent-blue-700;
+
+    &:hover {
+      background: $accent-blue-400;
+      border-color: $accent-blue-500;
+      color: $neutral-900;
+      box-shadow: 0 .8rem 1.4rem rgba($accent-blue-600, .16);
+    }
+  }
+
+  &--pink {
+    background: rgba($accent-pink-300, .2);
+    border-color: rgba($accent-pink-400, .34);
+    color: $accent-pink-600;
+
+    &:hover {
+      background: $accent-pink-300;
+      border-color: $accent-pink-400;
+      color: $neutral-900;
+      box-shadow: 0 .8rem 1.4rem rgba($accent-pink-500, .15);
+    }
+  }
+
+  @include respond(mobile) {
+    width: 100%;
+  }
+}

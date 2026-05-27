@@ -1,0 +1,76 @@
+.magic-card {
+  @extend %soft-panel;
+  height: 100%;
+  padding: 1.5rem;
+  position: relative;
+  transition: $transition-smooth;
+
+  &:hover {
+    box-shadow: $shadow-soft;
+    border-color: rgba($primary-500, .34);
+    transform: translateY(-8px) rotate(-.35deg);
+  }
+
+  &__icon {
+    @include flex-center;
+    border: 1px solid rgba($neutral-900, .05);
+    border-radius: $radius-md;
+    box-shadow: $shadow-xs;
+    color: $neutral-900;
+    font-size: 1.75rem;
+    height: 3.5rem;
+    margin-bottom: 1rem;
+    width: 3.5rem;
+  }
+}
+
+.icon-orange {
+  background: $primary-100;
+  color: $primary-800;
+}
+
+.icon-blue {
+  background: $accent-blue-100;
+  color: $accent-blue-700;
+}
+
+.icon-pink {
+  background: $accent-pink-100;
+  color: $accent-pink-600;
+}
+
+.icon-green {
+  background: $accent-green-100;
+  color: #4D7F34;
+}
+
+.icon-lilac {
+  background: $accent-lilac-100;
+  color: #7552BE;
+}
+
+.image-bubble {
+  border: .6rem solid $surface-card-strong;
+  border-radius: 2.25rem;
+  box-shadow: $shadow-soft;
+  overflow: hidden;
+
+  img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.sticker {
+  @include flex-center;
+  background: $accent-pink-100;
+  border: 1px solid rgba($accent-pink-400, .26);
+  border-radius: 50%;
+  box-shadow: $shadow-card;
+  color: $accent-pink-600;
+  font-size: 1.65rem;
+  height: 4rem;
+  position: absolute;
+  width: 4rem;
+}

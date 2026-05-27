@@ -1,0 +1,15 @@
+%soft-panel {
+  background: $surface-card;
+  border: 1px solid $border-soft;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+}
+
+%eyebrow {
+  color: $primary-800;
+  font-family: $font-heading;
+  font-size: .9rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}

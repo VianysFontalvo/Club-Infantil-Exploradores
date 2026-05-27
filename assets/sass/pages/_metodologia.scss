@@ -1,0 +1,18 @@
+.method-step {
+  background: rgba($surface-card-strong, .72);
+  border: 1px solid $border-soft;
+  border-left: .35rem solid $primary-500;
+  border-radius: 0 $radius-md $radius-md 0;
+  box-shadow: $shadow-xs;
+  margin-bottom: 1rem;
+  padding: 1rem 1.25rem;
+  padding-left: 1.25rem;
+
+  &:nth-child(2n) {
+    border-left-color: $accent-blue-400;
+  }
+
+  &:nth-child(3n) {
+    border-left-color: $accent-pink-300;
+  }
+}

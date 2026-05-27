@@ -1,0 +1,27 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin section-padding {
+  padding: 6rem 0;
+
+  @media (max-width: 768px) {
+    padding: 4rem 0;
+  }
+}
+
+@mixin playful-gradient($from, $to) {
+  background: linear-gradient(135deg, $from 0%, $to 100%);
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == tablet {
+    @media (max-width: 991px) { @content; }
+  }
+
+  @if $breakpoint == mobile {
+    @media (max-width: 575px) { @content; }
+  }
+}

@@ -1,0 +1,43 @@
+.contact-panel,
+.form-panel {
+  @extend %soft-panel;
+  padding: 2rem;
+}
+
+.form-label {
+  color: $neutral-800;
+}
+
+.form-control,
+.form-select {
+  background-color: $neutral-50;
+  border: 2px solid $border-primary;
+  border-radius: $radius-sm;
+  color: $neutral-800;
+  padding: .85rem 1rem;
+  transition: $transition-smooth;
+
+  &::placeholder {
+    color: $neutral-400;
+  }
+
+  &:focus {
+    background-color: $surface-card-strong;
+    border-color: $primary-500;
+    box-shadow: 0 0 0 .25rem rgba($primary-500, .24);
+  }
+}
+
+.map-frame {
+  border: 0;
+  border-radius: $radius-lg;
+  min-height: 320px;
+  width: 100%;
+}
+
+.contact-panel,
+.form-panel {
+  @include respond(mobile) {
+    padding: 1.25rem;
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "club-infantil-exploradores",
+  "version": "1.0.0",
+  "description": "Sitio institucional responsive para Club Infantil Exploradores.",
+  "scripts": {
+    "sass": "sass assets/sass/style.scss assets/css/style.css --watch",
+    "sass:build": "sass assets/sass/style.scss assets/css/style.css --style=compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
+}

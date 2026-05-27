@@ -1,0 +1,73 @@
+.site-header {
+  background: rgba($neutral-50, .92);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid $border-primary;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  padding: .85rem 0;
+
+  &-brand {
+    align-items: center;
+    display: inline-flex;
+    gap: .75rem;
+    font-size: 1.2rem;
+
+    img {
+      height: 48px;
+      width: auto;
+    }
+  }
+
+  .nav-link {
+    border-radius: $radius-pill;
+    color: $neutral-700;
+    font-weight: 800;
+    padding: .55rem .9rem !important;
+    transition: $transition-smooth;
+
+    &:hover {
+      background: $primary-100;
+      color: $primary-900;
+      transform: translateY(-1px);
+    }
+
+    &.active {
+      background: $primary-500;
+      box-shadow: $shadow-xs;
+      color: $neutral-900;
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 .2rem rgba($primary-500, .32);
+      outline: 0;
+    }
+  }
+}
+
+.navbar-collapse {
+  @include respond(tablet) {
+    background: $surface-card-strong;
+    border: 1px solid $border-soft;
+    border-radius: $radius-md;
+    box-shadow: $shadow-card;
+    margin-top: 1rem;
+    padding: 1rem;
+  }
+}
+
+.navbar-toggler {
+  border: 0;
+  border-radius: $radius-pill;
+  box-shadow: none !important;
+  padding: .65rem;
+}
+
+.navbar-brand span {
+  @include respond(mobile) {
+    max-width: 9rem;
+  }
+}

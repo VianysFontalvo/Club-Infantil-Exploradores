@@ -1,0 +1,64 @@
+@keyframes floaty {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-16px) rotate(4deg);
+  }
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(3deg);
+  }
+
+  75% {
+    transform: rotate(-3deg);
+  }
+}
+
+.floating-shape {
+  animation: floaty 5s ease-in-out infinite;
+  filter: blur(.1px);
+  border-radius: 38% 62% 59% 41%;
+  opacity: .72;
+  position: absolute;
+  z-index: 0;
+}
+
+.shape-one {
+  background: rgba($accent-pink-300, .48);
+  height: 9rem;
+  right: 8%;
+  top: 12%;
+  width: 9rem;
+}
+
+.shape-two {
+  animation-delay: 1s;
+  background: rgba($accent-blue-400, .42);
+  bottom: 14%;
+  height: 7rem;
+  left: 5%;
+  width: 7rem;
+}
+
+.shape-three {
+  animation-delay: 1.8s;
+  background: rgba($primary-500, .56);
+  height: 5rem;
+  right: 42%;
+  top: 70%;
+  width: 5rem;
+}
+
+.hover-wiggle:hover {
+  animation: wiggle .45s ease-in-out;
+}

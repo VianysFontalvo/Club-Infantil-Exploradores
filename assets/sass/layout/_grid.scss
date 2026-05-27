@@ -1,0 +1,39 @@
+.section {
+  @include section-padding;
+  position: relative;
+
+  &:nth-of-type(even) {
+    background: linear-gradient(180deg, rgba($primary-50, .55), rgba($neutral-50, .25));
+  }
+}
+
+.section-header {
+  margin-bottom: 2.5rem;
+}
+
+.split-layout {
+  align-items: center;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, .9fr);
+
+  @include respond(tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.decorated-bg {
+  position: relative;
+
+  &::before {
+    background: linear-gradient(135deg, rgba($accent-pink-300, .22), rgba($accent-blue-400, .16));
+    border-radius: 45% 55% 60% 40%;
+    content: "";
+    height: 18rem;
+    left: -8rem;
+    position: absolute;
+    top: 8%;
+    width: 18rem;
+    z-index: -1;
+  }
+}

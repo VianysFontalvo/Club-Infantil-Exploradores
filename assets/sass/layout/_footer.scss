@@ -1,0 +1,44 @@
+.site-footer {
+  background:
+    radial-gradient(circle at 10% 0%, rgba($primary-500, .22), transparent 22rem),
+    linear-gradient(180deg, $neutral-800 0%, $neutral-900 100%);
+  color: rgba($neutral-50, .86);
+  padding: 4rem 0 1.5rem;
+
+  a {
+    color: rgba($neutral-50, .84);
+    transition: $transition-smooth;
+
+    &:hover {
+      color: $primary-400;
+    }
+  }
+
+  h2,
+  h3,
+  h4 {
+    color: $neutral-50;
+    font-size: 1.15rem;
+  }
+}
+
+.footer-logo {
+  max-width: 172px;
+}
+
+.social-link {
+  @include flex-center;
+  background: rgba($neutral-50, .1);
+  border: 1px solid rgba($neutral-50, .12);
+  border-radius: 50%;
+  height: 2.5rem;
+  transition: $transition-smooth;
+  width: 2.5rem;
+
+  &:hover {
+    background: $primary-500;
+    border-color: $primary-500;
+    color: $neutral-900 !important;
+    transform: translateY(-3px);
+  }
+}

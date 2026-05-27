@@ -1,0 +1,219 @@
+.hero {
+  background:
+    radial-gradient(circle at 28% 22%, rgba($primary-500, .28), transparent 24rem),
+    radial-gradient(circle at 82% 18%, rgba($accent-blue-400, .22), transparent 20rem),
+    linear-gradient(180deg, $primary-50 0%, rgba($neutral-50, .96) 100%);
+  min-height: calc(100vh - 82px);
+  overflow: hidden;
+  padding: 5rem 0 3rem;
+  position: relative;
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__copy {
+    max-width: 44rem;
+  }
+
+  &__visual {
+    position: relative;
+  }
+
+  &__badge {
+    @extend %soft-panel;
+    border-color: rgba($primary-500, .3);
+    bottom: 1rem;
+    left: -1rem;
+    padding: 1rem 1.25rem;
+    position: absolute;
+
+    @include respond(mobile) {
+      left: .75rem;
+    }
+  }
+}
+
+.hero__actions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero__note {
+  align-items: center;
+  color: $neutral-600;
+  display: inline-flex;
+  font-weight: 800;
+  gap: .55rem;
+
+  i {
+    color: $primary-700;
+  }
+}
+
+.hero__badge {
+  strong {
+    color: $neutral-900;
+  }
+
+  i {
+    color: $primary-700;
+  }
+}
+
+.feature-panel {
+  position: relative;
+
+  &::after {
+    background: rgba($primary-500, .18);
+    border-radius: 38% 62% 50% 50%;
+    content: "";
+    height: 6.5rem;
+    position: absolute;
+    right: -1.5rem;
+    top: -1.5rem;
+    width: 6.5rem;
+    z-index: -1;
+  }
+}
+
+.methodology-card {
+  @extend .magic-card;
+  min-height: 100%;
+  padding: 1.35rem;
+}
+
+.program-card {
+  @extend %soft-panel;
+  height: 100%;
+  overflow: hidden;
+  transition: $transition-smooth;
+
+  &:hover {
+    border-color: rgba($primary-500, .38);
+    box-shadow: $shadow-soft;
+    transform: translateY(-7px);
+  }
+
+  &__image {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      transition: transform .45s ease;
+      width: 100%;
+    }
+  }
+
+  &:hover &__image img {
+    transform: scale(1.05);
+  }
+
+  &__body {
+    padding: 1.35rem;
+  }
+}
+
+.landing-cta {
+  background:
+    radial-gradient(circle at 8% 20%, rgba($accent-pink-300, .28), transparent 13rem),
+    radial-gradient(circle at 92% 18%, rgba($accent-blue-400, .2), transparent 15rem),
+    linear-gradient(135deg, $primary-500 0%, $primary-400 100%);
+  border: 0;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-soft;
+  color: $neutral-900;
+  overflow: hidden;
+  padding: clamp(2rem, 5vw, 4rem);
+  position: relative;
+
+  &::before,
+  &::after {
+    border-radius: 46% 54% 62% 38%;
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    background: rgba($surface-card-strong, .28);
+    height: 12rem;
+    right: -4rem;
+    top: -5rem;
+    width: 12rem;
+  }
+
+  &::after {
+    background: rgba($accent-pink-300, .24);
+    bottom: -4rem;
+    height: 10rem;
+    left: -3rem;
+    width: 10rem;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .btn-explorer--blue {
+    background: $neutral-900;
+    border-color: $neutral-900;
+    color: $neutral-50;
+
+    &:hover {
+      background: $neutral-800;
+      color: $neutral-50;
+    }
+  }
+}
+
+.hero-title span {
+  color: $primary-800;
+  position: relative;
+
+  &::after {
+    background: rgba($primary-500, .34);
+    border-radius: $radius-pill;
+    bottom: .06em;
+    content: "";
+    height: .18em;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+}
+
+.activity-strip {
+  background: rgba($surface-card-strong, .82);
+  border-block: 1px solid $border-primary;
+  padding: 1.25rem 0;
+}
+
+.activity-chip {
+  align-items: center;
+  background: $primary-50;
+  border: 1px solid $border-primary;
+  border-radius: $radius-pill;
+  color: $neutral-800;
+  display: inline-flex;
+  font-weight: 900;
+  gap: .5rem;
+  padding: .7rem 1rem;
+  transition: $transition-smooth;
+
+  i {
+    color: $primary-700;
+  }
+
+  &:hover {
+    background: $primary-100;
+    box-shadow: $shadow-xs;
+    transform: translateY(-2px);
+  }
+}
