@@ -1,44 +1,50 @@
 .site-header {
-  background: rgba($neutral-50, .92);
-  backdrop-filter: blur(18px);
-  border-bottom: 1px solid $border-primary;
   position: sticky;
-  top: 0;
+  top: .85rem;
   z-index: 1000;
 }
 
 .navbar {
-  padding: .85rem 0;
+  padding: 0;
+
+  > .container {
+    background: rgba($surface-card-strong, .9);
+    backdrop-filter: blur(18px);
+    border: 1px solid rgba($neutral-900, .08);
+    border-radius: $radius-pill;
+    box-shadow: 0 .85rem 2rem rgba($neutral-900, .08);
+    min-height: 4.25rem;
+    padding: .55rem .9rem .55rem 1rem;
+  }
 
   &-brand {
     align-items: center;
     display: inline-flex;
-    gap: .75rem;
     font-size: 1.2rem;
 
     img {
-      height: 48px;
+      height: 46px;
       width: auto;
     }
   }
 
   .nav-link {
     border-radius: $radius-pill;
-    color: $neutral-700;
-    font-weight: 800;
+    color: $neutral-900;
+    font-weight: 400;
     padding: .55rem .9rem !important;
     transition: $transition-smooth;
 
     &:hover {
-      background: $primary-100;
-      color: $primary-900;
+      color: $primary-700;
       transform: translateY(-1px);
     }
 
     &.active {
-      background: $primary-500;
-      box-shadow: $shadow-xs;
-      color: $neutral-900;
+      background: transparent;
+      box-shadow: none;
+      color: $primary-600;
+      font-weight: 400;
     }
 
     &:focus-visible {
@@ -64,10 +70,4 @@
   border-radius: $radius-pill;
   box-shadow: none !important;
   padding: .65rem;
-}
-
-.navbar-brand span {
-  @include respond(mobile) {
-    max-width: 9rem;
-  }
 }
