@@ -1,8 +1,4 @@
 .hero {
-  background:
-    radial-gradient(circle at 28% 22%, rgba($primary-500, .28), transparent 24rem),
-    radial-gradient(circle at 82% 18%, rgba($accent-blue-400, .22), transparent 20rem),
-    linear-gradient(180deg, $primary-50 0%, rgba($neutral-50, .96) 100%);
   min-height: calc(100vh - 82px);
   overflow: hidden;
   padding: 5rem 0 3rem;
@@ -160,16 +156,6 @@
     z-index: 1;
   }
 
-  .btn-explorer--blue {
-    background: $neutral-900;
-    border-color: $neutral-900;
-    color: $neutral-50;
-
-    &:hover {
-      background: $neutral-800;
-      color: $neutral-50;
-    }
-  }
 }
 
 .hero-title span {
