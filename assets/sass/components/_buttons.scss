@@ -4,15 +4,15 @@
   border-radius: $radius-pill;
   display: inline-flex;
   font-family: $font-heading;
-  font-weight: 900;
+  font-weight: 700;
   gap: .5rem;
   justify-content: center;
   line-height: 1.1;
-  padding: .9rem 1.45rem;
+  padding: .95rem 1.7rem;
   transition: $transition-smooth;
 
   &:hover {
-    transform: translateY(-3px) scale(1.015);
+    transform: translateY(-2px);
   }
 
   &:focus-visible {
@@ -26,39 +26,40 @@
   }
 
   &--primary {
-    background: linear-gradient(180deg, $primary-400 0%, $primary-500 100%);
-    box-shadow: $shadow-primary;
-    color: $neutral-900;
+    background: $primary-600;
+    border-color: $primary-600;
+    box-shadow: none;
+    color: $surface-card-strong;
 
     &:hover {
-      background: linear-gradient(180deg, $primary-500 0%, $primary-600 100%);
-      color: $neutral-900;
+      background: $primary-700;
+      border-color: $primary-700;
+      color: $surface-card-strong;
     }
   }
 
+  &--secondary,
   &--blue {
-    background: rgba($accent-blue-400, .16);
-    border-color: rgba($accent-blue-500, .34);
-    color: $accent-blue-700;
+    background: $primary-50;
+    border-color: $primary-600;
+    color: $neutral-700;
 
     &:hover {
-      background: $accent-blue-400;
-      border-color: $accent-blue-500;
+      background: $primary-100;
+      border-color: $primary-700;
       color: $neutral-900;
-      box-shadow: 0 .8rem 1.4rem rgba($accent-blue-600, .16);
     }
   }
 
   &--pink {
-    background: rgba($accent-pink-300, .2);
-    border-color: rgba($accent-pink-400, .34);
-    color: $accent-pink-600;
+    background: $primary-50;
+    border-color: $primary-600;
+    color: $neutral-700;
 
     &:hover {
-      background: $accent-pink-300;
-      border-color: $accent-pink-400;
+      background: $primary-100;
+      border-color: $primary-700;
       color: $neutral-900;
-      box-shadow: 0 .8rem 1.4rem rgba($accent-pink-500, .15);
     }
   }
 
