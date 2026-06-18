@@ -79,7 +79,7 @@ if (programModal) {
     document.getElementById("programModalAge").textContent = program.age;
     document.getElementById("programModalStatus").textContent = program.status;
     document.getElementById("programModalDescription").textContent = program.description;
-    document.getElementById("programModalWhatsapp").href = `https://wa.me/573001234567?text=${whatsappText}`;
+    document.getElementById("programModalWhatsapp").href = `https://wa.me/573014308739?text=${whatsappText}`;
 
     document.getElementById("programModalHighlights").innerHTML = program.highlights
       .map((item) => `<span><i class="bi bi-check2-circle" aria-hidden="true"></i>${item}</span>`)
