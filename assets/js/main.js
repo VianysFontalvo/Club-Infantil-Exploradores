@@ -19,7 +19,6 @@ const programDetails = {
   parvulo: {
     name: "Párvulo",
     age: "2 años",
-    status: "Inscripciones abiertas",
     description: "En el grado de Párvulo acompañamos a los niños en sus primeros pasos de exploración y descubrimiento. A través del juego, la estimulación sensorial y actividades lúdicas, fortalecemos la adaptación, el lenguaje, la motricidad fina y gruesa, la autonomía en hábitos básicos y la socialización, respetando siempre el ritmo de aprendizaje de cada niño.",
     highlights: ["Adaptación amorosa", "Estimulación sensorial", "Motricidad fina y gruesa", "Hábitos básicos"],
     images: [
@@ -31,7 +30,6 @@ const programDetails = {
   prekinder: {
     name: "Prekínder",
     age: "3 años",
-    status: "Inscripciones abiertas",
     description: "En Prekínder potenciamos la curiosidad natural de los niños mediante experiencias significativas y divertidas. Trabajamos el desarrollo del lenguaje, la motricidad, la identificación de colores, formas y números, el seguimiento de instrucciones y la expresión de emociones, fomentando la independencia y el aprendizaje a través del juego y la exploración.",
     highlights: ["Lenguaje y expresión", "Colores, formas y números", "Seguimiento de instrucciones", "Independencia"],
     images: [
@@ -43,7 +41,6 @@ const programDetails = {
   kinder: {
     name: "Kinder",
     age: "4 años",
-    status: "Inscripciones abiertas",
     description: "En el grado de Kinder fortalecemos habilidades cognitivas, comunicativas y sociales mediante actividades dinámicas y talleres Montessori. Los niños desarrollan el pensamiento lógico, el reconocimiento de letras y números, la creatividad, la resolución de situaciones cotidianas y el trabajo en equipo, preparándose de manera integral para nuevos retos de aprendizaje.",
     highlights: ["Pensamiento lógico", "Letras y números", "Creatividad", "Trabajo en equipo"],
     images: [
@@ -55,7 +52,6 @@ const programDetails = {
   transicion: {
     name: "Transición",
     age: "5 años",
-    status: "Inscripciones abiertas",
     description: "En Transición preparamos a los niños para el ingreso a la etapa escolar fortaleciendo competencias académicas, emocionales y sociales. Trabajamos la lectoescritura inicial, el pensamiento matemático, la autonomía, la responsabilidad y la confianza en sí mismos, siempre desde una metodología lúdica y significativa que les permita aprender de manera feliz y segura.",
     highlights: ["Lectoescritura inicial", "Pensamiento matemático", "Responsabilidad", "Confianza escolar"],
     images: [
@@ -77,7 +73,6 @@ if (programModal) {
 
     document.getElementById("programModalTitle").textContent = program.name;
     document.getElementById("programModalAge").textContent = program.age;
-    document.getElementById("programModalStatus").textContent = program.status;
     document.getElementById("programModalDescription").textContent = program.description;
     document.getElementById("programModalWhatsapp").href = `https://wa.me/573014308739?text=${whatsappText}`;
 

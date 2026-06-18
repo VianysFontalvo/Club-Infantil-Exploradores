@@ -250,12 +250,24 @@
 }
 
 .program-modal {
+  .modal-dialog {
+    @include respond(tablet) {
+      margin: .75rem;
+      max-height: calc(100dvh - 1.5rem);
+    }
+  }
+
   .modal-content {
     background: $surface-card-strong;
     border: 0;
     border-radius: 2rem;
     box-shadow: $shadow-soft;
     overflow: hidden;
+
+    @include respond(tablet) {
+      max-height: calc(100dvh - 1.5rem);
+      overflow-y: auto;
+    }
   }
 
   &__close {
@@ -286,6 +298,11 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     padding: 1rem;
 
+    @include respond(tablet) {
+      max-height: 42vh;
+      overflow-y: auto;
+    }
+
     img {
       border-radius: 1.2rem;
       box-shadow: $shadow-xs;
@@ -298,11 +315,23 @@
         grid-column: span 2;
         min-height: 18rem;
       }
+
+      @include respond(tablet) {
+        min-height: 8rem;
+
+        &:first-child {
+          min-height: 12rem;
+        }
+      }
     }
   }
 
   &__content {
     padding: clamp(1.5rem, 4vw, 3rem);
+
+    @include respond(tablet) {
+      padding: 1.25rem;
+    }
   }
 
   &__description {
